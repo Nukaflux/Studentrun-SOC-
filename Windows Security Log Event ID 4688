@@ -1,0 +1,2 @@
+sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventDescription="Process Create" 
+| top CommandLine
