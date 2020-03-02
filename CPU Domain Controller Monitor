@@ -1,0 +1,1 @@
+host="Your host " source="Perfmon:Available Memory" | eval Value=Value/10240000 |timechart avg(Value) as Value span=1h)
