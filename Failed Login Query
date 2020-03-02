@@ -1,0 +1,8 @@
+source="WinEventLog:security" EventCode=4625
+| eval Workstation_Name=lower(Workstation_Name)
+| eval host=lower(host) 
+| eval hammer=_time 
+| bucket span=5m hammer 
+| stats count sparkline by user host, hammer, Workstation_Name
+| rename hammer as "5 minute blocks" host as "Target Host" Workstation_Name as "Source Host"
+| convert ctime("5 minute blocks")
