@@ -1,0 +1,2 @@
+LogName=Security Logon_Type IN (2,7,10,11) NOT user IN ("DWM-*", "UMFD-*")
+| timechart span=1h count by host
