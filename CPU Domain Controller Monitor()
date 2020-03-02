@@ -1,0 +1,1 @@
+eventtype=perfmon host="your host" object="Processor" counter="% Processor Time"|fillnull value="Total" instance|timechart avg(Value) as Value
