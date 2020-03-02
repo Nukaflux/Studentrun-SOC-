@@ -1,0 +1,3 @@
+sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=13 
+| eval Time=strftime(_time,"%m/%d/%Y %I:%M:%S %p") 
+| top TargetObject
