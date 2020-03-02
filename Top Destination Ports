@@ -1,0 +1,4 @@
+sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"  EventDescription="Network Connect" 
+| top dest_port 
+|rename dest_port  AS "Destination Port"
+
