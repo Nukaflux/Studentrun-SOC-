@@ -1,0 +1,1 @@
+host=gateway sourcetype!=pfsense_filterlog
