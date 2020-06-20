@@ -10,5 +10,3 @@ The student run SOC at Cal Poly Pomona is project that students can utilize in t
 ## What is here?
 I currently will be posting copys of my search queries. These search queries are directly from splunk enterprise and can be applied in your own siem instance of Splunk. Splunk developed the Search Processing Language (SPL) to use with Splunk software. SPL encompasses all the search commands and their functions, arguments, and clauses. One way to learn the SPL language is by using the Search Assistant. This is where I will store SPL specific files. 
 
-<img src="https://lh5.googleusercontent.com/F81kNAZGOXwRKqN3IGVPVrxhfotFrlpAlwDxoEZAYYopzQ73x7DqN3NznpBjvJumOtJNGNZL_Q=w16383">
-
