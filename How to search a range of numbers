@@ -1,0 +1,2 @@
+| where myField>aNumber 
+| where myfield<aNumber
