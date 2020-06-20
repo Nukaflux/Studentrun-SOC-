@@ -1,5 +1,7 @@
 # Mitchell C. Hill Student Run SOC Documentation
 
+<src=“https://github.com/Nukaflux/Studentrun-SOC-/blob/master/unnamed.png?raw=true” >
+
 ## About me
 Hello my name is Jensen and I am currently working on projects at the Mitchell C. Hill Student Data Center. Specifically at the Security Operations Center. I am currently a third year studying cyber security and hope that my projects here help you out! I specialize in the use of Splunk Enterprise, a powerful data analytics platform that can also be deployed as a SIEM.
 
