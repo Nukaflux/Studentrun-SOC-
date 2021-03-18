@@ -1,0 +1,13 @@
+index=YOURINDEX EventCode IN (4725,4722) earliest=-90d 
+| eval account=mvindex(Account_Name,1)
+| stats values(_time) as times, earliest(EventCode) as firstEvent, latest(EventCode) as lastEvent, latest(Account_Name) as lastAccounts, earliest(Account_Name) as firstAccounts by account
+| eval last_action_user=mvindex(lastAccounts,0), first_action_user=mvindex(firstAccounts, 0)
+| replace "4722" with "enabled" in firstEvent, lastEvent
+| replace "4725" with "disabled" in firstEvent, lastEvent
+| search account != "*\$" AND firstEvent != "enabled" AND lastEvent != "disabled"
+| eval range=relative_time(now(), "-1d@d") ```this determines what range to look for the re-enabling```
+| eval enabled_DT=mvindex(times,1), disabled_DT=mvindex(times, 0)
+| where enabled_DT > range 
+| table account, disabled_DT, first_action_user, enabled_DT, last_action_user
+| rename first_action_user as "Disable Actioning Account", account as "Enabled Account", last_action_user as "Enable Actioning Account", disabled_DT as "DateTime Disabled", enabled_DT as "DateTime Enabled"
+| convert ctime("DateTime Disabled"), ctime("DateTime Enabled")
