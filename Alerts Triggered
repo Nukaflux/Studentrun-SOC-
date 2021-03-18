@@ -1,0 +1,5 @@
+index=_audit action=alert_fired ss_app=* | eval ttl=expiration-now() 
+| search ttl>0 
+| convert ctime(trigger_time)
+| table trigger_time ss_name severity
+| rename trigger_time as "Alert Time" ss_name as "Alert Name" severity as "Severity"
